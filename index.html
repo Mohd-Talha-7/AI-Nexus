@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ameego AI Nexus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#1E40AF', // A modern blue
+                '50': '#EBF5FF',
+                '100': '#D6EAF8',
+                '200': '#AED6F1',
+                '300': '#85C1E9',
+                '400': '#5DADE2',
+                '500': '#3498DB',
+                '600': '#2E86C1',
+                '700': '#2874A6',
+                '800': '#236388',
+                '900': '#1E526B',
+              },
+              secondary: '#10B981', // Green for success
+              accent: {
+                orange: '#F59E0B',
+                red: '#EF4444',
+              },
+              light: {
+                'bg': '#FFFFFF',
+                'card': '#F9FAFB',
+                'border': '#E5E7EB',
+              },
+              dark: {
+                'text': '#1F2937', // Dark gray for text
+                'text-secondary': '#6B7280',
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'slide-in': 'slideIn 0.5s forwards',
+              'slide-out': 'slideOut 0.5s forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideIn: {
+                'from': { transform: 'translateX(-100%)' },
+                'to': { transform: 'translateX(0)' },
+              },
+              slideOut: {
+                'from': { transform: 'translateX(0)' },
+                'to': { transform: 'translateX(-100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.1.1/client",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-light-bg text-dark-text">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
