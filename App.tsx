@@ -9,7 +9,6 @@ import TechStack from './components/TechStack';
 import Pricing from './components/Pricing';
 import Engagement from './components/Engagement';
 import Footer from './components/Footer';
-import FloatingWidget from './components/FloatingWidget';
 import ExitIntentPopup from './components/ExitIntentPopup';
 import SocialProofPopup from './components/SocialProofPopup';
 
@@ -45,7 +44,6 @@ const App: React.FC = () => {
                 <Engagement />
             </main>
             <Footer />
-            <FloatingWidget />
             <SocialProofPopup />
             {showExitIntent && <ExitIntentPopup onClose={() => setShowExitIntent(false)} />}
         </div>

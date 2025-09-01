@@ -3,6 +3,10 @@ import { CheckCircleIcon } from './icons/CheckCircleIcon';
 import { SparklesIcon } from './icons/SparklesIcon';
 
 const SuccessStories: React.FC = () => {
+    const handleChatClick = () => {
+        window.dispatchEvent(new Event('elevenlabs-convai-open'));
+    };
+
     return (
         <section id="success-stories" className="py-20 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,7 +50,7 @@ const SuccessStories: React.FC = () => {
                         <SparklesIcon className="w-12 h-12 mb-4" />
                         <h3 className="text-2xl font-bold">Try Our AI Assistant</h3>
                         <p className="mt-2 text-primary-200">Experience our AI in action right here on this page.</p>
-                        <button className="mt-6 bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <button onClick={handleChatClick} className="mt-6 bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 shadow-lg">
                             Chat with AI Now
                         </button>
                     </div>
